@@ -3,6 +3,28 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
+.generated-password {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.generated-password label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.generated-password input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
 .container {
     max-width: 400px;
     margin: 0 auto;
@@ -92,3 +114,4 @@ input[type="checkbox"]:checked + .checkbox-wrapper:after {
     background-color: #a590e4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
