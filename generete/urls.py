@@ -1,5 +1,5 @@
 from django.urls import path
-
-urlspatterns = [
-    path()
+from . import views
+urlpatterns = [
+    path('', views.TestView)
 ]
