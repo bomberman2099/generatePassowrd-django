@@ -15,8 +15,10 @@ def generate_password(length, symbols=False, numbers=False, lowercase=False, upp
     if uppercase:
         chars += string.ascii_uppercase
 
-
-
+    if not chars:
+        error.append("At least one checkbox must be selected.")
+        return error
+    else:
         password = ''.join(random.choice(chars) for _ in range(length))
         return password
 
@@ -33,7 +35,8 @@ def TestView(request):
         password = generate_password(length, symbols, numbers, lowercase, uppercase)
         return render(request, 'index.html', {'password': password})
 
+    else:
+        error = generate_password(length, symbols, numbers, lowercase, uppercase)
 
 
-
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'error': error})
